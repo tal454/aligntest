@@ -1,0 +1,8 @@
+<div class="photo-container">
+    <div class="photo"  *ngIf="selectedPhoto">
+        <img [src]="selectedPhoto.imageSrc" (mouseover)="changeVisibility()" (mouseleave)="changeVisibility()">
+        <div class="author" [class.open]="authorVisible">
+            {{selectedPhoto.author}}
+        </div>
+    </div>
+</div>

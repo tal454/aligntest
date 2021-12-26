@@ -1,0 +1,16 @@
+<div class="photos-bar-container">
+    <div class="bar-col arrow previous" (click)="moveCarousel(-1)">
+        <mat-icon [icIcon]="previousIcon"></mat-icon>
+    </div>
+    <div class="images-bar"
+        [ngClass]="{'left': carouselState==-1, 'middle': carouselState==0, 'right': carouselState==1}">
+        <ng-container *ngFor="let photo of photos; let i =index">
+            <div class="bar-col image-col" (click)="choosePhoto(i)">
+                <img [src]="photo.imageSrc">
+            </div>
+        </ng-container>
+    </div>
+    <div class="bar-col arrow next" (click)="moveCarousel(1)">
+        <mat-icon [icIcon]="nextIcon"></mat-icon>
+    </div>
+</div>

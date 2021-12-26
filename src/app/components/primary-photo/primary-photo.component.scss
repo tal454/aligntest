@@ -1,0 +1,32 @@
+.photo-container {
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .photo {
+        height: 100%;
+        width: 60%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        img {
+            height: 100%;
+        }
+
+        .author {
+            position: absolute;
+            bottom: 0;
+            height: 0vh;
+            width: 100%;
+            color: white;
+            opacity: 0;
+            background-color: black;
+
+            &.open {
+                opacity: 0.8;
+                height: 15vh;
+                transition: ease-in all 0.5s;
+            }
+        }
+    }
+}
